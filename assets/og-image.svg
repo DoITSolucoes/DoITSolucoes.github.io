@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#070a0e"/>
+<circle cx="1030" cy="100" r="260" fill="#7cff65" opacity=".06"/>
+<circle cx="180" cy="540" r="280" fill="#35d3ff" opacity=".05"/>
+<rect x="70" y="70" width="90" height="90" rx="20" fill="none" stroke="#7cff65" stroke-width="4"/>
+<text x="115" y="130" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="800" fill="#7cff65">IT</text>
+<text x="70" y="285" font-family="Arial,sans-serif" font-size="76" font-weight="800" fill="#f4f7fa">Do I.T</text>
+<text x="70" y="355" font-family="Arial,sans-serif" font-size="36" fill="#7cff65">Soluções em software para negócios</text>
+<text x="70" y="425" font-family="Arial,sans-serif" font-size="25" fill="#9ca8b5">Landing pages • Sites institucionais • Software sob medida</text>
+</svg>
