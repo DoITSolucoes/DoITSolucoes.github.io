@@ -1,0 +1,1434 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clínica Fulana | Clínica Odontológica</title>
+
+    <meta name="description"
+        content="Modelo de site profissional para clínicas odontológicas. Apresente seus tratamentos, equipe, estrutura e facilite o contato com seus pacientes.">
+
+    <meta name="keywords"
+        content="clínica odontológica, dentista, dentista perto de mim, tratamento odontológico, implante dentário, ortodontia">
+
+    <meta name="author" content="Do I.T - Soluções em Software">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://doitsolucoes.github.io/modelodonto/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Clínica Fulana | Clínica Odontológica">
+    <meta property="og:description"
+        content="Modelo demonstrativo de site profissional para clínicas odontológicas.">
+    <meta property="og:url" content="https://doitsolucoes.github.io/modelodonto/">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #24323d;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        /* =========================
+           CORES
+        ========================= */
+
+        :root {
+            --primary: #159a9c;
+            --primary-dark: #087577;
+            --secondary: #e8f8f7;
+            --dark: #20313b;
+            --text: #53636d;
+            --white: #ffffff;
+            --border: #dce9e9;
+            --soft: #f7fbfb;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,.96);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+
+        .logo span {
+            display: block;
+            font-size: .72rem;
+            font-weight: 500;
+            color: var(--text);
+            letter-spacing: .5px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: .92rem;
+            font-weight: 600;
+            color: var(--dark);
+            transition: .2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .nav-button {
+            padding: 11px 18px;
+            background: var(--primary);
+            color: white !important;
+            border-radius: 30px;
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 0;
+            background: transparent;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(235,249,248,.97),
+                    rgba(235,249,248,.82)
+                ),
+                linear-gradient(135deg, #e5f8f7, #ffffff);
+
+            padding: 90px 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 18px;
+            color: var(--primary-dark);
+            font-size: .82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h1 {
+            font-size: clamp(2.4rem, 5vw, 4.2rem);
+            line-height: 1.08;
+            color: var(--dark);
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: var(--text);
+            font-size: 1.08rem;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: .2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary);
+            color: var(--primary-dark);
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+        }
+
+        .hero-image {
+            min-height: 420px;
+            border-radius: 24px;
+            background:
+                linear-gradient(
+                    rgba(21,154,156,.08),
+                    rgba(21,154,156,.18)
+                ),
+                url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1000&q=80")
+                center/cover;
+            box-shadow: 0 25px 60px rgba(25,80,80,.15);
+        }
+
+        /* =========================
+           TRUST
+        ========================= */
+
+        .trust {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .trust strong {
+            display: block;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .trust span {
+            font-size: .85rem;
+            color: var(--text);
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text);
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: var(--soft);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: .25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.07);
+        }
+
+        .icon {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: var(--secondary);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .card p {
+            color: var(--text);
+            font-size: .94rem;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 430px;
+            border-radius: 20px;
+            background:
+                url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80")
+                center/cover;
+        }
+
+        .about h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .about p {
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .check-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           TEAM
+        ========================= */
+
+        .team {
+            background: var(--soft);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .doctor {
+            text-align: center;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .doctor-photo {
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .doctor-info {
+            padding: 22px;
+        }
+
+        .doctor-info h3 {
+            color: var(--dark);
+        }
+
+        .doctor-info p {
+            color: var(--text);
+            font-size: .9rem;
+        }
+
+        /* =========================
+           TESTIMONIALS
+        ========================= */
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .testimonial {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: white;
+        }
+
+        .stars {
+            color: #e2a51d;
+            margin-bottom: 15px;
+        }
+
+        .testimonial p {
+            color: var(--text);
+            font-size: .95rem;
+            margin-bottom: 18px;
+        }
+
+        .testimonial strong {
+            color: var(--dark);
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            opacity: .9;
+            margin-bottom: 28px;
+        }
+
+        .cta .btn {
+            background: white;
+            color: var(--primary-dark);
+        }
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        details {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        details p {
+            color: var(--text);
+            padding-top: 12px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: var(--soft);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 18px;
+        }
+
+        .contact-info p {
+            color: var(--text);
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            margin-bottom: 18px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--dark);
+        }
+
+        .contact-item span {
+            color: var(--text);
+        }
+
+        .map-placeholder {
+            min-height: 360px;
+            border-radius: 18px;
+            background: #dfeeee;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 30px;
+            color: var(--text);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 0;
+            background: #17252d;
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        footer p {
+            font-size: .85rem;
+            opacity: .75;
+        }
+
+        footer a {
+            color: #8ce0df;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: #25d366;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,.2);
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 76px;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 25px;
+                flex-direction: column;
+                border-bottom: 1px solid var(--border);
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .hero-content,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero-image {
+                min-height: 330px;
+            }
+
+            .services-grid,
+            .team-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-image {
+                min-height: 330px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 65px 0;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .services-grid,
+            .team-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                min-height: 280px;
+            }
+
+            h1 {
+                font-size: 2.45rem;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+            Clínica Fulana
+            <span>Odontologia especializada</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+            ☰
+        </button>
+
+        <nav id="menu">
+
+            <a href="#sobre">A Clínica</a>
+            <a href="#tratamentos">Tratamentos</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#faq">Dúvidas</a>
+            <a href="#contato" class="nav-button">
+                Agendar consulta
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <div>
+
+                <span class="eyebrow">
+                    Modelo demonstrativo
+                </span>
+
+                <h1>
+                    Cuidar do seu sorriso pode ser mais simples.
+                </h1>
+
+                <p>
+                    Atendimento odontológico personalizado,
+                    ambiente acolhedor e profissionais preparados
+                    para cuidar de cada etapa do seu tratamento.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#contato" class="btn btn-primary">
+                        Agendar avaliação
+                    </a>
+
+                    <a href="#tratamentos" class="btn btn-outline">
+                        Conhecer tratamentos
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image"
+                 role="img"
+                 aria-label="Imagem ilustrativa de clínica odontológica">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRUST -->
+
+    <section class="trust">
+
+        <div class="container trust-grid">
+
+            <div>
+                <strong>Atendimento humanizado</strong>
+                <span>Uma experiência pensada para você</span>
+            </div>
+
+            <div>
+                <strong>Equipe especializada</strong>
+                <span>Profissionais qualificados</span>
+            </div>
+
+            <div>
+                <strong>Localização acessível</strong>
+                <span>Consulte nossos horários</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRATAMENTOS -->
+
+    <section class="services" id="tratamentos">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="eyebrow">
+                    Tratamentos
+                </span>
+
+                <h2>
+                    Soluções para diferentes necessidades
+                </h2>
+
+                <p>
+                    Substitua estes conteúdos pelos tratamentos
+                    realmente oferecidos pela sua clínica.
+                </p>
+
+            </div>
+
+            <div class="services-grid">
+
+                <article class="card">
+
+                    <div class="icon">🦷</div>
+
+                    <h3>Implantes dentários</h3>
+
+                    <p>
+                        Placeholder para apresentar informações
+                        sobre implantes e o atendimento realizado
+                        pela clínica.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="icon">😁</div>
+
+                    <h3>Ortodontia</h3>
+
+                    <p>
+                        Placeholder para explicar tratamentos
+                        ortodônticos, aparelhos e acompanhamento.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="icon">✨</div>
+
+                    <h3>Estética dental</h3>
+
+                    <p>
+                        Placeholder para apresentar os tratamentos
+                        estéticos disponíveis.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="icon">🪥</div>
+
+                    <h3>Clínica geral</h3>
+
+                    <p>
+                        Avaliações, prevenção e cuidados gerais
+                        com a saúde bucal.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="icon">👶</div>
+
+                    <h3>Odontopediatria</h3>
+
+                    <p>
+                        Placeholder para atendimento infantil
+                        e acompanhamento odontológico.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="icon">🩺</div>
+
+                    <h3>Endodontia</h3>
+
+                    <p>
+                        Informações sobre tratamento de canal
+                        e procedimentos relacionados.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section class="about" id="sobre">
+
+        <div class="container about-grid">
+
+            <div class="about-image"
+                 role="img"
+                 aria-label="Imagem ilustrativa de consultório odontológico">
+            </div>
+
+            <div>
+
+                <span class="eyebrow">
+                    Sobre a clínica
+                </span>
+
+                <h2>
+                    Um espaço pensado para cuidar de você.
+                </h2>
+
+                <p>
+                    Este é um texto demonstrativo. Aqui a clínica
+                    pode contar sua história, apresentar sua filosofia
+                    de atendimento e explicar o que torna sua experiência
+                    diferente.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>Atendimento personalizado</li>
+                    <li>Ambiente confortável</li>
+                    <li>Profissionais especializados</li>
+                    <li>Estrutura moderna</li>
+
+                </ul>
+
+                <a href="#contato" class="btn btn-primary">
+                    Conhecer a clínica
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EQUIPE -->
+
+    <section class="team" id="equipe">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="eyebrow">
+                    Nossa equipe
+                </span>
+
+                <h2>
+                    Profissionais que cuidam do seu sorriso
+                </h2>
+
+                <p>
+                    Substitua os nomes, fotos, especialidades e
+                    registros profissionais pelos dados reais.
+                </p>
+
+            </div>
+
+
+            <div class="team-grid">
+
+                <article class="doctor">
+
+                    <div class="doctor-photo"
+                         style="background-image:url('https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=700&q=80');">
+                    </div>
+
+                    <div class="doctor-info">
+
+                        <h3>Dra. Nome Sobrenome</h3>
+
+                        <p>
+                            Cirurgiã-dentista<br>
+                            CRO 00000
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="doctor">
+
+                    <div class="doctor-photo"
+                         style="background-image:url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=80');">
+                    </div>
+
+                    <div class="doctor-info">
+
+                        <h3>Dr. Nome Sobrenome</h3>
+
+                        <p>
+                            Ortodontista<br>
+                            CRO 00000
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="doctor">
+
+                    <div class="doctor-photo"
+                         style="background-image:url('https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=700&q=80');">
+                    </div>
+
+                    <div class="doctor-info">
+
+                        <h3>Dra. Nome Sobrenome</h3>
+
+                        <p>
+                            Especialista<br>
+                            CRO 00000
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DEPOIMENTOS -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="eyebrow">
+                    Experiência dos pacientes
+                </span>
+
+                <h2>
+                    O que nossos pacientes dizem
+                </h2>
+
+                <p>
+                    Utilize somente avaliações reais e autorizadas
+                    da clínica.
+                </p>
+
+            </div>
+
+
+            <div class="testimonials-grid">
+
+                <article class="testimonial">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "Placeholder para uma avaliação real
+                        de paciente."
+                    </p>
+
+                    <strong>
+                        Nome do paciente
+                    </strong>
+
+                </article>
+
+
+                <article class="testimonial">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "Placeholder para uma avaliação real
+                        de paciente."
+                    </p>
+
+                    <strong>
+                        Nome do paciente
+                    </strong>
+
+                </article>
+
+
+                <article class="testimonial">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "Placeholder para uma avaliação real
+                        de paciente."
+                    </p>
+
+                    <strong>
+                        Nome do paciente
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="container cta-content">
+
+            <h2>
+                Seu sorriso merece atenção.
+            </h2>
+
+            <p>
+                Entre em contato com nossa equipe e saiba
+                como podemos ajudar.
+            </p>
+
+            <a href="#contato" class="btn">
+                Quero agendar uma avaliação
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section id="faq">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="eyebrow">
+                    Dúvidas frequentes
+                </span>
+
+                <h2>
+                    Perguntas frequentes
+                </h2>
+
+            </div>
+
+
+            <div class="faq">
+
+                <details>
+
+                    <summary>
+                        Quais tratamentos a clínica oferece?
+                    </summary>
+
+                    <p>
+                        Placeholder para listar os principais
+                        tratamentos oferecidos pela clínica.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Como posso agendar uma consulta?
+                    </summary>
+
+                    <p>
+                        Placeholder para explicar o processo
+                        de agendamento.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        A clínica atende convênios?
+                    </summary>
+
+                    <p>
+                        Placeholder para informar os convênios
+                        realmente aceitos pela clínica.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Onde a clínica está localizada?
+                    </summary>
+
+                    <p>
+                        Placeholder para endereço, bairro,
+                        cidade e informações de acesso.
+                    </p>
+
+                </details>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section class="contact" id="contato">
+
+        <div class="container contact-grid">
+
+            <div class="contact-info">
+
+                <span class="eyebrow">
+                    Entre em contato
+                </span>
+
+                <h2>
+                    Vamos cuidar do seu sorriso?
+                </h2>
+
+                <p>
+                    Substitua estas informações pelos dados
+                    reais da clínica.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <strong>📍 Endereço</strong>
+
+                    <span>
+                        Rua Exemplo, 123 — Centro
+                        <br>
+                        São Paulo - SP
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>📞 Telefone</strong>
+
+                    <span>
+                        (11) 00000-0000
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>🕐 Horário</strong>
+
+                    <span>
+                        Segunda a sexta: 08h às 18h
+                    </span>
+
+                </div>
+
+
+                <a href="#"
+                   class="btn btn-primary"
+                   onclick="return whatsappDemo()">
+
+                    Falar pelo WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <div class="map-placeholder">
+
+                <div>
+
+                    <strong>
+                        📍 Mapa da clínica
+                    </strong>
+
+                    <p>
+                        Aqui pode ser integrado um mapa do Google
+                        com a localização real do estabelecimento.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-content">
+
+        <p>
+            © <span id="year"></span> Clínica Fulana.
+            Todos os direitos reservados.
+        </p>
+
+        <p>
+            Site desenvolvido por
+            <a href="https://doitsolucoes.github.io/"
+               target="_blank"
+               rel="noopener">
+                Do I.T - Soluções em Software
+            </a>
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a href="#"
+   class="whatsapp"
+   aria-label="Falar pelo WhatsApp"
+   onclick="return whatsappDemo()">
+    💬
+</a>
+
+
+<script>
+
+    // Ano automático
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    // Menu mobile
+
+    const menuToggle =
+        document.querySelector(".menu-toggle");
+
+    const menu =
+        document.querySelector("#menu");
+
+    menuToggle.addEventListener("click", () => {
+
+        menu.classList.toggle("active");
+
+    });
+
+
+    // Fecha menu ao clicar em um link
+
+    document.querySelectorAll("#menu a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            menu.classList.remove("active");
+
+        });
+
+    });
+
+
+    // WhatsApp demonstrativo
+
+    function whatsappDemo() {
+
+        alert(
+            "DEMO: aqui será inserido o WhatsApp real da clínica."
+        );
+
+        return false;
+
+    }
+
+</script>
+
+</body>
+</html>

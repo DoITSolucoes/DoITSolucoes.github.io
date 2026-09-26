@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página principal -->
   <url>
-    <loc>http://doitsolucoes.github.io/</loc>
+    <loc>https://doitsolucoes.github.io/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Modelo de Psicologia -->
+  <url>
+    <loc>https://doitsolucoes.github.io/modelopsicologia/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Modelo de Odontologia -->
+  <url>
+    <loc>https://doitsolucoes.github.io/modelodonto/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Modelo de Advocacia -->
+  <url>
+    <loc>https://doitsolucoes.github.io/modeloadvocacia/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Modelo de Estética -->
+  <url>
+    <loc>https://doitsolucoes.github.io/modeloestetica/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

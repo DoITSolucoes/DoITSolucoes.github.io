@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>[Nome da Clínica] | Clínica de Psicologia em [Cidade]</title>
+
+    <meta name="description"
+          content="Clínica de Psicologia [Nome]. Atendimento psicológico presencial e online em [Cidade]. Conheça nossa equipe, áreas de atuação e formas de atendimento.">
+
+    <meta name="keywords"
+          content="psicologia, psicólogo, clínica de psicologia, terapia, psicoterapia, psicólogo em [cidade], atendimento psicológico">
+
+    <meta name="author"
+          content="[Nome da Clínica]">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://doitsolucoes.github.io/modelopsicologia/">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="[Nome da Clínica] | Clínica de Psicologia">
+
+    <meta property="og:description"
+          content="Atendimento psicológico presencial e online em [Cidade].">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://doitsolucoes.github.io/modelopsicologia/">
+
+    <meta property="og:image"
+          content="https://placehold.co/1200x630/e9e2dc/5f554d?text=Imagem+da+Clínica">
+
+    <meta name="theme-color"
+          content="#7b7068">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #faf8f5;
+            color: #403b37;
+            line-height: 1.7;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+        :root {
+            --primary: #7b7068;
+            --primary-dark: #625952;
+            --secondary: #d9cec5;
+            --light: #f5f0eb;
+            --cream: #faf8f5;
+            --white: #ffffff;
+            --text: #403b37;
+            --muted: #77706a;
+            --border: #e5ddd7;
+            --accent: #b9a79a;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(250, 248, 245, 0.96);
+            border-bottom: 1px solid var(--border);
+
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            max-width: 1150px;
+            margin: auto;
+
+            min-height: 78px;
+            padding: 0 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 1.35rem;
+            color: var(--primary-dark);
+        }
+
+        .logo span {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: .65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: .9rem;
+            color: var(--text);
+            transition: .2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-btn {
+            display: none;
+
+            background: none;
+            border: none;
+
+            font-size: 1.7rem;
+            color: var(--primary-dark);
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            max-width: 1150px;
+            margin: auto;
+
+            padding: 80px 20px;
+
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .hero-content small {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: .75rem;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            margin: 18px 0;
+
+            font-family: Georgia, serif;
+            font-weight: normal;
+
+            font-size: clamp(2.4rem, 5vw, 4.3rem);
+            line-height: 1.1;
+
+            color: var(--primary-dark);
+        }
+
+        .hero p {
+            max-width: 570px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 22px;
+
+            border-radius: 5px;
+
+            transition: .2s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary);
+            color: var(--primary-dark);
+        }
+
+        .btn-outline:hover {
+            background: var(--light);
+        }
+
+        .hero-image {
+            min-height: 500px;
+
+            background-image:
+                url("https://placehold.co/800x1000/e5ddd7/625952?text=Foto+da+Clínica");
+
+            background-size: cover;
+            background-position: center;
+
+            border-radius: 180px 180px 15px 15px;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            background: var(--light);
+            padding: 60px 20px;
+        }
+
+        .intro-grid {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+
+            text-align: center;
+        }
+
+        .intro-item {
+            padding: 10px;
+        }
+
+        .intro-icon {
+            width: 52px;
+            height: 52px;
+
+            margin: 0 auto 15px;
+
+            border-radius: 50%;
+
+            background: var(--white);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .intro h3 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+
+        .intro p {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-header {
+            max-width: 650px;
+            margin: 0 auto 50px;
+
+            text-align: center;
+        }
+
+        .section-header small {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: .72rem;
+            font-weight: bold;
+        }
+
+        .section-header h2 {
+            margin: 12px 0;
+
+            font-family: Georgia, serif;
+            font-weight: normal;
+
+            font-size: 2.4rem;
+            color: var(--primary-dark);
+        }
+
+        .section-header p {
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        .about {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 480px;
+
+            background:
+                url("https://placehold.co/800x900/d9cec5/625952?text=Foto+da+Profissional")
+                center / cover;
+
+            border-radius: 10px;
+        }
+
+        .about-content small {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: .72rem;
+        }
+
+        .about-content h2 {
+            margin: 15px 0;
+
+            font-family: Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: normal;
+
+            color: var(--primary-dark);
+        }
+
+        .about-content p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .professional-info {
+            margin-top: 25px;
+            padding: 20px;
+
+            background: var(--light);
+            border-left: 3px solid var(--accent);
+        }
+
+        .professional-info strong {
+            display: block;
+            color: var(--primary-dark);
+        }
+
+        .professional-info span {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+
+        /* =========================
+           SERVIÇOS
+        ========================= */
+
+        .services {
+            background: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            padding: 30px;
+
+            background: var(--white);
+            border: 1px solid var(--border);
+
+            border-radius: 8px;
+
+            transition: .2s;
+        }
+
+        .service:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(70, 60, 50, .07);
+        }
+
+        .service-number {
+            color: var(--accent);
+            font-family: Georgia, serif;
+            font-size: 1.5rem;
+        }
+
+        .service h3 {
+            margin: 12px 0 8px;
+
+            font-family: Georgia, serif;
+            font-weight: normal;
+
+            color: var(--primary-dark);
+        }
+
+        .service p {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+
+        /* =========================
+           COMO FUNCIONA
+        ========================= */
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            background: var(--secondary);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: Georgia, serif;
+            font-size: 1.2rem;
+
+            color: var(--primary-dark);
+        }
+
+        .step h3 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+
+        /* =========================
+           ESPAÇO
+        ========================= */
+
+        .space {
+            background: var(--light);
+        }
+
+        .space-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .space-photo {
+            height: 280px;
+
+            background-size: cover;
+            background-position: center;
+
+            border-radius: 8px;
+        }
+
+        .photo-1 {
+            background-image:
+                url("https://placehold.co/700x500/e0d8d1/625952?text=Consultório");
+        }
+
+        .photo-2 {
+            background-image:
+                url("https://placehold.co/700x500/d8cec6/625952?text=Recepção");
+        }
+
+        .photo-3 {
+            background-image:
+                url("https://placehold.co/700x500/ebe5df/625952?text=Ambiente");
+        }
+
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        details {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+
+        summary {
+            cursor: pointer;
+
+            font-family: Georgia, serif;
+            font-size: 1.1rem;
+
+            color: var(--primary-dark);
+        }
+
+        details p {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: .95rem;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background: var(--primary-dark);
+            color: white;
+
+            text-align: center;
+        }
+
+        .cta h2 {
+            max-width: 650px;
+            margin: auto;
+
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: normal;
+        }
+
+        .cta p {
+            max-width: 600px;
+            margin: 18px auto 30px;
+
+            color: #e4ded9;
+        }
+
+        .cta .btn {
+            background: white;
+            color: var(--primary-dark);
+        }
+
+
+        /* =========================
+           CONTATO
+        ========================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+
+            font-size: 2.3rem;
+            color: var(--primary-dark);
+
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            margin-bottom: 18px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--primary-dark);
+        }
+
+        .contact-item span {
+            color: var(--muted);
+        }
+
+        .map {
+            min-height: 380px;
+
+            background:
+                url("https://placehold.co/800x600/e6e1dc/625952?text=Mapa+do+Consultório")
+                center / cover;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #322e2b;
+            color: #ddd;
+
+            padding: 40px 20px;
+
+            text-align: center;
+        }
+
+        footer strong {
+            font-family: Georgia, serif;
+            font-size: 1.2rem;
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: .85rem;
+            color: #aaa;
+        }
+
+        .doit {
+            margin-top: 20px;
+            font-size: .8rem;
+        }
+
+        .doit a {
+            color: #ddd;
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+
+            right: 20px;
+            bottom: 20px;
+
+            width: 58px;
+            height: 58px;
+
+            border-radius: 50%;
+
+            background: #25d366;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 1.4rem;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,.18);
+
+            z-index: 999;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+
+                top: 78px;
+                left: 0;
+                right: 0;
+
+                background: var(--cream);
+
+                flex-direction: column;
+                gap: 0;
+
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li a {
+                display: block;
+                padding: 15px 20px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 55px;
+            }
+
+            .hero-image {
+                min-height: 400px;
+            }
+
+            .about,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                min-height: 400px;
+            }
+
+            .services-grid,
+            .steps,
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .space-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .space-photo {
+                height: 260px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            section {
+                padding: 65px 18px;
+            }
+
+            .hero {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-image {
+                min-height: 350px;
+                border-radius: 100px 100px 10px 10px;
+            }
+
+            .section-header h2,
+            .about-content h2,
+            .cta h2 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="#" class="logo">
+            [Nome da Clínica]
+            <span>Psicologia</span>
+        </a>
+
+        <button class="menu-btn"
+                aria-label="Abrir menu"
+                id="menuBtn">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="#sobre">Sobre</a>
+            </li>
+
+            <li>
+                <a href="#atuacao">Atuação</a>
+            </li>
+
+            <li>
+                <a href="#como-funciona">Atendimento</a>
+            </li>
+
+            <li>
+                <a href="#faq">Dúvidas</a>
+            </li>
+
+            <li>
+                <a href="#contato">Contato</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <small>
+                Clínica de Psicologia
+            </small>
+
+            <h1>
+                Um espaço para cuidar de você com acolhimento e respeito.
+            </h1>
+
+            <p>
+                Atendimento psicológico para adultos, adolescentes e
+                [outros públicos]. Um espaço pensado para que você possa
+                falar, refletir e construir seu processo com tranquilidade.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contato"
+                   class="btn btn-primary">
+                    Conheça o atendimento
+                </a>
+
+                <a href="#sobre"
+                   class="btn btn-outline">
+                    Conheça a clínica
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PLACEHOLDER DE IMAGEM -->
+
+        <div class="hero-image"
+             role="img"
+             aria-label="Foto do ambiente da clínica">
+        </div>
+
+    </section>
+
+
+    <!-- DESTAQUES -->
+
+    <section class="intro">
+
+        <div class="intro-grid">
+
+            <div class="intro-item">
+
+                <div class="intro-icon">
+                    ♡
+                </div>
+
+                <h3>Acolhimento</h3>
+
+                <p>
+                    Um ambiente pensado para proporcionar
+                    uma experiência tranquila desde o primeiro contato.
+                </p>
+
+            </div>
+
+
+            <div class="intro-item">
+
+                <div class="intro-icon">
+                    ◌
+                </div>
+
+                <h3>Atendimento individualizado</h3>
+
+                <p>
+                    Cada processo é construído considerando
+                    as necessidades e particularidades de cada pessoa.
+                </p>
+
+            </div>
+
+
+            <div class="intro-item">
+
+                <div class="intro-icon">
+                    ✦
+                </div>
+
+                <h3>Presencial e online</h3>
+
+                <p>
+                    Atendimento presencial em [Cidade] e
+                    possibilidade de atendimento online.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section id="sobre">
+
+        <div class="container">
+
+            <div class="about">
+
+                <div class="about-image"
+                     role="img"
+                     aria-label="Foto da psicóloga">
+                </div>
+
+
+                <div class="about-content">
+
+                    <small>
+                        Sobre a profissional
+                    </small>
+
+                    <h2>
+                        Olá, eu sou [Nome da Psicóloga].
+                    </h2>
+
+                    <p>
+                        Sou psicóloga formada pela [Instituição],
+                        com atuação em [área de atuação].
+                    </p>
+
+                    <p>
+                        Meu trabalho busca oferecer um espaço de
+                        escuta e reflexão, respeitando a história,
+                        o momento e as necessidades de cada pessoa.
+                    </p>
+
+                    <p>
+                        [Adicione aqui uma breve apresentação
+                        profissional da psicóloga.]
+                    </p>
+
+
+                    <div class="professional-info">
+
+                        <strong>
+                            [Nome Completo]
+                        </strong>
+
+                        <span>
+                            Psicóloga — CRP [00/00000]
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+
+    <section id="atuacao"
+             class="services">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <small>
+                    Áreas de atuação
+                </small>
+
+                <h2>
+                    Como podemos trabalhar juntos
+                </h2>
+
+                <p>
+                    Substitua os exemplos abaixo pelas áreas
+                    efetivamente oferecidas pela profissional.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <article class="service">
+
+                    <span class="service-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Psicoterapia para adultos
+                    </h3>
+
+                    <p>
+                        Espaço de escuta e reflexão para questões
+                        pessoais, profissionais e relacionais.
+                    </p>
+
+                </article>
+
+
+                <article class="service">
+
+                    <span class="service-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Psicoterapia para adolescentes
+                    </h3>
+
+                    <p>
+                        Atendimento voltado às particularidades
+                        da adolescência e suas diferentes experiências.
+                    </p>
+
+                </article>
+
+
+                <article class="service">
+
+                    <span class="service-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Ansiedade e estresse
+                    </h3>
+
+                    <p>
+                        Acompanhamento psicológico para pessoas
+                        que desejam compreender melhor suas experiências.
+                    </p>
+
+                </article>
+
+
+                <article class="service">
+
+                    <span class="service-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Autoconhecimento
+                    </h3>
+
+                    <p>
+                        Um espaço para refletir sobre escolhas,
+                        relacionamentos e diferentes momentos da vida.
+                    </p>
+
+                </article>
+
+
+                <article class="service">
+
+                    <span class="service-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Relacionamentos
+                    </h3>
+
+                    <p>
+                        Trabalho voltado à reflexão sobre relações
+                        interpessoais e experiências afetivas.
+                    </p>
+
+                </article>
+
+
+                <article class="service">
+
+                    <span class="service-number">
+                        06
+                    </span>
+
+                    <h3>
+                        [Outra especialidade]
+                    </h3>
+
+                    <p>
+                        Substitua este conteúdo pela área de atuação
+                        específica da profissional.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMO FUNCIONA -->
+
+    <section id="como-funciona">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <small>
+                    Primeiro contato
+                </small>
+
+                <h2>
+                    Como funciona o atendimento?
+                </h2>
+
+                <p>
+                    Uma explicação simples ajuda o visitante
+                    a entender o próximo passo.
+                </p>
+
+            </div>
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Entre em contato
+                    </h3>
+
+                    <p>
+                        Envie uma mensagem pelo WhatsApp ou
+                        utilize um dos canais disponíveis.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Conversamos
+                    </h3>
+
+                    <p>
+                        Você poderá tirar dúvidas sobre horários,
+                        modalidade e funcionamento do atendimento.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Agendamento
+                    </h3>
+
+                    <p>
+                        Após definir os detalhes, o atendimento
+                        poderá ser agendado.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ESPAÇO -->
+
+    <section class="space">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <small>
+                    Nosso espaço
+                </small>
+
+                <h2>
+                    Um ambiente pensado para acolher
+                </h2>
+
+                <p>
+                    Utilize esta área para mostrar o consultório,
+                    recepção e outros ambientes.
+                </p>
+
+            </div>
+
+
+            <div class="space-grid">
+
+                <div class="space-photo photo-1"
+                     role="img"
+                     aria-label="Foto do consultório">
+                </div>
+
+                <div class="space-photo photo-2"
+                     role="img"
+                     aria-label="Foto da recepção">
+                </div>
+
+                <div class="space-photo photo-3"
+                     role="img"
+                     aria-label="Foto do ambiente">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section id="faq">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <small>
+                    Perguntas frequentes
+                </small>
+
+                <h2>
+                    Algumas dúvidas comuns
+                </h2>
+
+            </div>
+
+
+            <div class="faq">
+
+
+                <details>
+
+                    <summary>
+                        O atendimento pode ser online?
+                    </summary>
+
+                    <p>
+                        [Informe aqui se a profissional oferece
+                        atendimento online e as condições aplicáveis.]
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Como funciona a primeira sessão?
+                    </summary>
+
+                    <p>
+                        [Explique de maneira simples como funciona
+                        o primeiro atendimento.]
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Onde fica o consultório?
+                    </summary>
+
+                    <p>
+                        [Endereço ou região do consultório.]
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Como faço para agendar?
+                    </summary>
+
+                    <p>
+                        Entre em contato pelo WhatsApp ou pelo canal
+                        informado na seção de contato.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Quais são os horários de atendimento?
+                    </summary>
+
+                    <p>
+                        [Informe os dias e horários de atendimento.]
+                    </p>
+
+                </details>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>
+                Dar o primeiro passo também pode ser uma forma de cuidado.
+            </h2>
+
+            <p>
+                Se você deseja conhecer melhor o atendimento,
+                entre em contato para tirar suas dúvidas.
+            </p>
+
+            <a href="#contato"
+               class="btn">
+                Falar com a clínica
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section id="contato">
+
+        <div class="container">
+
+            <div class="contact-grid">
+
+
+                <div class="contact-info">
+
+                    <h2>
+                        Entre em contato
+                    </h2>
+
+                    <p>
+                        Utilize os canais abaixo para obter informações
+                        sobre atendimento e agendamento.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            WhatsApp
+                        </strong>
+
+                        <span>
+                            (11) 99999-9999
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            E-mail
+                        </strong>
+
+                        <span>
+                            contato@clinicaexemplo.com.br
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Endereço
+                        </strong>
+
+                        <span>
+                            Rua [Nome], nº 000 — [Bairro]
+                            <br>
+                            [Cidade] — [UF]
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Horário
+                        </strong>
+
+                        <span>
+                            Segunda a sexta — [08h às 18h]
+                        </span>
+
+                    </div>
+
+
+                    <a href="https://wa.me/5511999999999"
+                       class="btn btn-primary"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Conversar pelo WhatsApp
+
+                    </a>
+
+                </div>
+
+
+                <!-- PLACEHOLDER MAPA -->
+
+                <div class="map"
+                     role="img"
+                     aria-label="Mapa mostrando a localização do consultório">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <strong>
+        [Nome da Clínica]
+    </strong>
+
+    <p>
+        Psicologia • [Cidade/UF]
+    </p>
+
+    <p>
+        CRP [00/00000]
+    </p>
+
+    <div class="doit">
+
+        Modelo desenvolvido por
+
+        <a href="https://doitsolucoes.github.io/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            Do I.T — Soluções em Software
+
+        </a>
+
+    </div>
+
+    <p>
+        © <span id="year"></span> [Nome da Clínica].
+        Todos os direitos reservados.
+    </p>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/5511999999999"
+   class="whatsapp"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Falar pelo WhatsApp">
+
+    ☎
+
+</a>
+
+
+<script>
+
+    /* =========================
+       MENU MOBILE
+    ========================= */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+
+    /* Fecha o menu após clicar */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+
+    /* =========================
+       ANO AUTOMÁTICO
+    ========================= */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>
